@@ -14,19 +14,19 @@ import UIKit
             self.setGradient()
         }
     }
-    
+
     @IBInspectable var gradientColor2: UIColor = UIColor.white {
         didSet{
             self.setGradient()
         }
     }
-    
+
     @IBInspectable var gradientStartPoint: CGPoint = .zero {
         didSet{
             self.setGradient()
         }
     }
-    
+
     @IBInspectable var gradientEndPoint: CGPoint = CGPoint(x: 0, y: 1) {
         didSet{
             self.setGradient()
@@ -35,11 +35,15 @@ import UIKit
     
     private func setGradient()
     {
-        let gradientLayer = CAGradientLayer()
-        gradientLayer.colors = [self.gradientColor1.cgColor, self.gradientColor2.cgColor]
-        gradientLayer.startPoint = self.gradientStartPoint
-        gradientLayer.endPoint = self.gradientEndPoint
-        gradientLayer.frame = self.bounds
-        self.layer.addSublayer(gradientLayer)
+        let gradLayer = CAGradientLayer()
+        gradLayer.colors = [self.gradientColor1.cgColor, self.gradientColor2.cgColor]
+        gradLayer.startPoint = self.gradientStartPoint
+        gradLayer.endPoint = self.gradientEndPoint
+        gradLayer.frame = self.bounds
+        if let topLayer = self.layer.sublayers?.first, topLayer is CAGradientLayer
+        {
+            topLayer.removeFromSuperlayer()
+        }
+        self.layer.insertSublayer(gradLayer, at: 0)
     }
 }

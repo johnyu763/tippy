@@ -14,12 +14,14 @@ class ViewController: UIViewController {
     @IBOutlet weak var tipLabel: UILabel!
     @IBOutlet weak var totalLabel: UILabel!
     @IBOutlet weak var tipControl: UISegmentedControl!
-    
+    @IBOutlet var gradView: GradientView!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        billField.layer.borderColor = UIColor.black.cgColor
+        billField.layer.borderWidth = 1
     }
-        
+    
     
     @IBAction func onTap(_ sender: Any) {
         view.endEditing(true)
