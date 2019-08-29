@@ -18,8 +18,11 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        billField.layer.borderColor = UIColor.black.cgColor
-        billField.layer.borderWidth = 1
+        let defaults = UserDefaults.standard
+        
+        if(UserDefaults.standard.object(forKey: "myIndex") != nil){
+            tipControl.selectedSegmentIndex = defaults.integer(forKey: "myIndex")
+        }
     }
     
     
