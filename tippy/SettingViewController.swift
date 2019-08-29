@@ -9,7 +9,9 @@
 import UIKit
 
 class SettingViewController: UIViewController {
-
+    
+    @IBOutlet var gradient: SettingGradient!
+    
     @IBOutlet var tipPercentages: [UIButton]!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,14 +46,8 @@ class SettingViewController: UIViewController {
             defaults.set(2, forKey: "myIndex")
         }
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    
+    @IBAction func handleColorChange(_ sender: UISlider) {
     }
-    */
-
 }
