@@ -110,7 +110,7 @@
                         <barButtonItem key="rightBarButtonItem" title="Settings" image="settingicon" id="v4L-fB-vXh">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
-                                <segue destination="8e5-iE-h8y" kind="show" id="HI2-xd-1oY"/>
+                                <segue destination="8e5-iE-h8y" kind="show" id="FsC-Jb-06J"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -134,78 +134,64 @@
         <!--Settings-->
         <scene sceneID="uHm-v8-3CG">
             <objects>
-                <viewController title="Settings" id="8e5-iE-h8y" customClass="SettingViewController" customModule="tippy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Settings" id="8e5-iE-h8y" customClass="ViewController" customModule="tippy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4vq-Ub-ph0" customClass="SettingGradient" customModule="tippy" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Default Tip Percentage" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SQs-aX-PGP">
-                                <rect key="frame" x="46" y="118" width="132" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eTW-ZH-LRb">
-                                <rect key="frame" x="290" y="118" width="80" height="128"/>
+                                <rect key="frame" x="167" y="140" width="80" height="96"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LHK-EL-c9a">
-                                        <rect key="frame" x="0.0" y="32" width="80" height="32"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="80" height="32"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="20"/>
                                         <state key="normal" title="15%"/>
                                         <connections>
-                                            <action selector="percentTapped:" destination="8e5-iE-h8y" eventType="touchUpInside" id="DMu-6X-ppq"/>
+                                            <action selector="percentTapped:" destination="8e5-iE-h8y" eventType="touchUpInside" id="0Hm-H9-IEv"/>
                                         </connections>
                                     </button>
                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tp5-g9-oFe">
-                                        <rect key="frame" x="0.0" y="64" width="80" height="32"/>
+                                        <rect key="frame" x="0.0" y="32" width="80" height="32"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="20"/>
                                         <state key="normal" title="18%"/>
                                         <connections>
-                                            <action selector="percentTapped:" destination="8e5-iE-h8y" eventType="touchUpInside" id="ihl-vt-1ht"/>
+                                            <action selector="percentTapped:" destination="8e5-iE-h8y" eventType="touchUpInside" id="R3M-Mt-pfw"/>
                                         </connections>
                                     </button>
                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MnA-4i-mDY">
-                                        <rect key="frame" x="0.0" y="96" width="80" height="32"/>
+                                        <rect key="frame" x="0.0" y="64" width="80" height="32"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="20"/>
                                         <state key="normal" title="20%"/>
                                         <connections>
-                                            <action selector="percentTapped:" destination="8e5-iE-h8y" eventType="touchUpInside" id="b3S-bo-YGB"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Ae-yb-J0m">
-                                        <rect key="frame" x="0.0" y="0.0" width="80" height="32"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="20"/>
-                                        <connections>
-                                            <action selector="handleSelection:" destination="8e5-iE-h8y" eventType="touchUpInside" id="X4d-zd-FU6"/>
+                                            <action selector="percentTapped:" destination="8e5-iE-h8y" eventType="touchUpInside" id="tfx-xu-9G8"/>
                                         </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Note: For settings to take effect, close and restart the app" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ih0-KR-nAf">
-                                <rect key="frame" x="46" y="803" width="322" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vib-cp-MCF">
-                                <rect key="frame" x="46" y="190" width="122" height="32"/>
+                                <rect key="frame" x="146" y="244" width="122" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="20"/>
                                 <state key="normal" title="Color Settings"/>
                                 <connections>
                                     <segue destination="7t7-SJ-z3Z" kind="show" id="Cym-ih-FqJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Nm-Nf-6hl">
+                                <rect key="frame" x="109" y="100" width="197" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="20"/>
+                                <state key="normal" title="Default Tip Percentage"/>
+                                <connections>
+                                    <action selector="handleSelection:" destination="8e5-iE-h8y" eventType="touchUpInside" id="6wd-Rg-4RF"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -222,20 +208,19 @@
                         </userDefinedRuntimeAttributes>
                     </view>
                     <connections>
-                        <outlet property="gradient" destination="4vq-Ub-ph0" id="lXH-Ua-uFe"/>
-                        <outletCollection property="tipPercentages" destination="LHK-EL-c9a" collectionClass="NSMutableArray" id="zsM-Xx-DIH"/>
-                        <outletCollection property="tipPercentages" destination="tp5-g9-oFe" collectionClass="NSMutableArray" id="6y9-8o-Gsz"/>
-                        <outletCollection property="tipPercentages" destination="MnA-4i-mDY" collectionClass="NSMutableArray" id="onb-OF-pkV"/>
+                        <outletCollection property="PercentageOptions" destination="LHK-EL-c9a" collectionClass="NSMutableArray" id="CRD-hi-QEE"/>
+                        <outletCollection property="PercentageOptions" destination="tp5-g9-oFe" collectionClass="NSMutableArray" id="gEp-Ju-Bjp"/>
+                        <outletCollection property="PercentageOptions" destination="MnA-4i-mDY" collectionClass="NSMutableArray" id="r6c-cL-Ya4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KVb-Fc-mog" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="6978.2608695652179" y="111.83035714285714"/>
         </scene>
-        <!--Setting View Controller-->
+        <!--View Controller-->
         <scene sceneID="h7l-F9-ODi">
             <objects>
-                <viewController id="7t7-SJ-z3Z" customClass="SettingViewController" customModule="tippy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="7t7-SJ-z3Z" customClass="ViewController" customModule="tippy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wiP-IP-uW6" customClass="SettingGradient" customModule="tippy" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -414,7 +399,7 @@
                         <viewLayoutGuide key="safeArea" id="zbD-QR-qaj"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="gradientColor2">
-                                <color key="value" red="0.33256798321620906" green="0.72671389580000001" blue="0.65556604514490413" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="value" red="0.33333333333333331" green="0.72549019607843135" blue="0.65490196078431373" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="color" keyPath="gradientColor1">
                                 <color key="value" red="0.75686274509803919" green="0.90679614410782727" blue="0.9824817777" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
