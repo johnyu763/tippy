@@ -8,9 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		FB374A8A230E27B90090007B /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB374A89230E27B90090007B /* GradientView.swift */; };
-		FB655E8623173CB700C5B4BE /* DropDownButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB655E8523173CB700C5B4BE /* DropDownButton.swift */; };
+		FB655E822313746900C5B4BE /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB655E812313746900C5B4BE /* SettingViewController.swift */; };
 		FB655E882317705600C5B4BE /* textView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB655E872317705600C5B4BE /* textView.swift */; };
-		FBA18AD82317929500EA9BE3 /* SettingGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA18AD72317929500EA9BE3 /* SettingGradient.swift */; };
 		FBFA4301230D0D63001D3843 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBFA4300230D0D63001D3843 /* AppDelegate.swift */; };
 		FBFA4303230D0D63001D3843 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBFA4302230D0D63001D3843 /* ViewController.swift */; };
 		FBFA4306230D0D63001D3843 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBFA4304230D0D63001D3843 /* Main.storyboard */; };
@@ -39,9 +38,8 @@
 
 /* Begin PBXFileReference section */
 		FB374A89230E27B90090007B /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
-		FB655E8523173CB700C5B4BE /* DropDownButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownButton.swift; sourceTree = "<group>"; };
+		FB655E812313746900C5B4BE /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		FB655E872317705600C5B4BE /* textView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = textView.swift; sourceTree = "<group>"; };
-		FBA18AD72317929500EA9BE3 /* SettingGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingGradient.swift; sourceTree = "<group>"; };
 		FBFA42FD230D0D63001D3843 /* tippy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tippy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBFA4300230D0D63001D3843 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FBFA4302230D0D63001D3843 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -105,10 +103,9 @@
 		FBFA42FF230D0D63001D3843 /* tippy */ = {
 			isa = PBXGroup;
 			children = (
-				FBA18AD72317929500EA9BE3 /* SettingGradient.swift */,
+				FB655E812313746900C5B4BE /* SettingViewController.swift */,
 				FBFA4300230D0D63001D3843 /* AppDelegate.swift */,
 				FBFA4302230D0D63001D3843 /* ViewController.swift */,
-				FB655E8523173CB700C5B4BE /* DropDownButton.swift */,
 				FBFA4304230D0D63001D3843 /* Main.storyboard */,
 				FB374A89230E27B90090007B /* GradientView.swift */,
 				FB655E872317705600C5B4BE /* textView.swift */,
@@ -268,11 +265,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FBA18AD82317929500EA9BE3 /* SettingGradient.swift in Sources */,
-				FB655E8623173CB700C5B4BE /* DropDownButton.swift in Sources */,
 				FBFA4303230D0D63001D3843 /* ViewController.swift in Sources */,
 				FBFA4301230D0D63001D3843 /* AppDelegate.swift in Sources */,
 				FB374A8A230E27B90090007B /* GradientView.swift in Sources */,
+				FB655E822313746900C5B4BE /* SettingViewController.swift in Sources */,
 				FB655E882317705600C5B4BE /* textView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
