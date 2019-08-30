@@ -8,13 +8,20 @@
 
 import UIKit
 
-class ViewController: SettingViewController {
+class ViewController: UIViewController {
 
+    @IBOutlet var mainGrad: [GradientView]!
+    @IBOutlet var mainColor1: [UISlider]!
+    @IBOutlet var mainColor2: [UISlider]!
+    
     @IBOutlet weak var billField: UITextField!
     @IBOutlet weak var tipLabel: UILabel!
     @IBOutlet weak var totalLabel: UILabel!
     @IBOutlet weak var tipControl: UISegmentedControl!
     @IBOutlet var gradView: GradientView!
+    
+    var defaults = UserDefaults.standard
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -39,6 +46,22 @@ class ViewController: SettingViewController {
         
         tipLabel.text = String(format: "$%.2f", tip)
         totalLabel.text = String(format: "$%.2f", total)
+    }
+    
+    @IBAction func handleMainColor1(_ sender: UISlider) {
+        mainColor1.forEach{slider in
+            defaults.set(slider.value, forKey: String(format: "%@%@","maincolor1", slider.accessibilityLabel!))
+        }
+        let color = UIColor(red: CGFloat(defaults.float(forKey: "maincolor1red")/255), green: CGFloat(defaults.float(forKey: "maincolor1green")/255), blue: CGFloat(defaults.float(forKey: "maincolor1blue")/255), alpha: 1.0)
+//        mainGrad.forEach{grad in
+//            grad.setColor(color1: color, color2: nil)
+//        }
+    }
+    
+    @IBAction func handleMainColor2(_ sender: UISlider) {
+        mainColor2.forEach{slider in
+            print(String(slider.accessibilityLabel ?? "None"))
+        }
     }
 }
 

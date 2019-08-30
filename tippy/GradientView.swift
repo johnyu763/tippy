@@ -46,4 +46,10 @@ import UIKit
         }
         self.layer.insertSublayer(gradLayer, at: 0)
     }
+    
+    public func setColor(color1 : UIColor?, color2 : UIColor?){
+        self.gradientColor1 = color1 ?? self.gradientColor1
+        self.gradientColor2 = color2 ?? self.gradientColor2
+        self.setGradient()
+    }
 }
