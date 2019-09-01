@@ -9,10 +9,6 @@
 import UIKit
 
 class SettingViewController: ColorViewController {
-    
-
-    @IBOutlet var SettingGrad1: GradientView!
-    @IBOutlet var SettingGrad2: GradientView!
         
     @IBOutlet var tipPercentages: [UIButton]!
     override func viewDidLoad() {

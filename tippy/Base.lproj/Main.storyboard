@@ -92,6 +92,9 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <accessibility key="accessibilityConfiguration" label="1">
+                            <bool key="isElement" value="YES"/>
+                        </accessibility>
                         <gestureRecognizers/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <userDefinedRuntimeAttributes>
@@ -120,10 +123,10 @@
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="billField" destination="fHw-K6-B3K" id="Ygj-jm-0Jo"/>
-                        <outlet property="mainGrad" destination="8bC-Xf-vdC" id="11k-kI-Cuw"/>
                         <outlet property="tipControl" destination="OaZ-8r-Th3" id="lb4-ca-vxd"/>
                         <outlet property="tipLabel" destination="Njq-1U-zcW" id="tbb-ZX-TZH"/>
                         <outlet property="totalLabel" destination="paz-OU-GjJ" id="x2w-ps-RPd"/>
+                        <outletCollection property="mainGrad" destination="8bC-Xf-vdC" collectionClass="NSMutableArray" id="SxX-7n-9cq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -246,6 +249,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
+                        <accessibility key="accessibilityConfiguration" label="2">
+                            <bool key="isElement" value="YES"/>
+                        </accessibility>
                         <viewLayoutGuide key="safeArea" id="Frz-MB-mu4"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="gradientColor1">
@@ -261,13 +267,13 @@
                         <userDefinedRuntimeAttribute type="boolean" keyPath="isSub" value="NO"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
-                        <outlet property="settingGrad" destination="cYa-XB-SlF" id="GFF-o6-Jft"/>
                         <outletCollection property="settingColor1" destination="j1o-cV-93H" collectionClass="NSMutableArray" id="mh4-Qw-21c"/>
                         <outletCollection property="settingColor1" destination="uOG-IK-PeW" collectionClass="NSMutableArray" id="rZS-Vg-Vid"/>
                         <outletCollection property="settingColor1" destination="Tna-r7-4nn" collectionClass="NSMutableArray" id="yBV-0J-OLD"/>
                         <outletCollection property="settingColor2" destination="Ent-av-SiF" collectionClass="NSMutableArray" id="bhl-pK-TwD"/>
                         <outletCollection property="settingColor2" destination="sNn-iH-V4d" collectionClass="NSMutableArray" id="drH-pV-0Cl"/>
                         <outletCollection property="settingColor2" destination="9RJ-FZ-Trs" collectionClass="NSMutableArray" id="611-pT-C3r"/>
+                        <outletCollection property="settingGrad" destination="cYa-XB-SlF" collectionClass="NSMutableArray" id="NGo-ag-LpQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oiU-d3-q1p" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -363,6 +369,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <accessibility key="accessibilityConfiguration" label="3">
+                            <bool key="isElement" value="YES"/>
+                        </accessibility>
                         <viewLayoutGuide key="safeArea" id="pjl-Cx-yIN"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="gradientColor1">
@@ -381,6 +390,7 @@
                         <outletCollection property="tipPercentages" destination="LHK-EL-c9a" collectionClass="NSMutableArray" id="zsM-Xx-DIH"/>
                         <outletCollection property="tipPercentages" destination="tp5-g9-oFe" collectionClass="NSMutableArray" id="6y9-8o-Gsz"/>
                         <outletCollection property="tipPercentages" destination="MnA-4i-mDY" collectionClass="NSMutableArray" id="onb-OF-pkV"/>
+                        <outletCollection property="settingGrad" destination="4vq-Ub-ph0" collectionClass="NSMutableArray" id="Owh-lT-mGR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KVb-Fc-mog" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -508,6 +518,9 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <accessibility key="accessibilityConfiguration" label="4">
+                            <bool key="isElement" value="YES"/>
+                        </accessibility>
                         <viewLayoutGuide key="safeArea" id="zbD-QR-qaj"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="gradientColor2">
@@ -523,13 +536,13 @@
                         <userDefinedRuntimeAttribute type="boolean" keyPath="isSub" value="NO"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
-                        <outlet property="mainGrad" destination="wiP-IP-uW6" id="dqp-I0-Afv"/>
                         <outletCollection property="mainColor1" destination="8Y8-g8-qj3" collectionClass="NSMutableArray" id="lSR-gC-lp6"/>
                         <outletCollection property="mainColor1" destination="xTC-Gm-0Sz" collectionClass="NSMutableArray" id="aYN-MX-tQV"/>
                         <outletCollection property="mainColor1" destination="8W0-OS-t9A" collectionClass="NSMutableArray" id="GD4-mz-WFy"/>
                         <outletCollection property="mainColor2" destination="IhY-EU-RJJ" collectionClass="NSMutableArray" id="MsD-m4-l6D"/>
                         <outletCollection property="mainColor2" destination="gNg-WV-viq" collectionClass="NSMutableArray" id="SYb-Qv-Oud"/>
                         <outletCollection property="mainColor2" destination="KPp-k7-B1I" collectionClass="NSMutableArray" id="7F1-kf-YA4"/>
+                        <outletCollection property="mainGrad" destination="wiP-IP-uW6" collectionClass="NSMutableArray" id="JI2-RL-DJg"/>
                     </connections>
                 </viewController>
             </objects>

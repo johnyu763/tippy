@@ -9,9 +9,6 @@
 import UIKit
 
 class ViewController: ColorViewController {
-
-
-    @IBOutlet var mainGrad: GradientView!
     
     @IBOutlet weak var billField: UITextField!
     @IBOutlet weak var tipLabel: UILabel!
@@ -21,9 +18,10 @@ class ViewController: ColorViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-//        if(defaults.object(forKey: "myIndex") != nil){
-//            tipControl.selectedSegmentIndex = defaults.integer(forKey: "myIndex")
-//        }
+        if(defaults.object(forKey: "myIndex") != nil){
+            tipControl.selectedSegmentIndex = defaults.integer(forKey: "myIndex")
+        }
+
     }
     
     
