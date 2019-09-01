@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SettingViewController: ColorViewController {
+class SettingViewController: ViewController {
         
     @IBOutlet var tipPercentages: [UIButton]!
     override func viewDidLoad() {
@@ -42,6 +42,9 @@ class SettingViewController: ColorViewController {
             defaults.set(1, forKey: "myIndex")
         case .twenty:
             defaults.set(2, forKey: "myIndex")
+        }
+        tipPercentages.forEach{button in
+            button.isHidden = !button.isHidden
         }
     }
     

@@ -51,6 +51,5 @@ import UIKit
         self.gradientColor1 = color1 ?? self.gradientColor1
         self.gradientColor2 = color2 ?? self.gradientColor2
         self.setGradient()
-//        print(self.accessibilityLabel)
     }
 }
