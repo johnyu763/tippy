@@ -114,9 +114,13 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="keyName" value="main"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isSub" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="billField" destination="fHw-K6-B3K" id="Ygj-jm-0Jo"/>
-                        <outlet property="mainGrad" destination="8bC-Xf-vdC" id="2lG-5o-Flr"/>
+                        <outlet property="mainGrad" destination="8bC-Xf-vdC" id="11k-kI-Cuw"/>
                         <outlet property="tipControl" destination="OaZ-8r-Th3" id="lb4-ca-vxd"/>
                         <outlet property="tipLabel" destination="Njq-1U-zcW" id="tbb-ZX-TZH"/>
                         <outlet property="totalLabel" destination="paz-OU-GjJ" id="x2w-ps-RPd"/>
@@ -131,10 +135,10 @@
             </objects>
             <point key="canvasLocation" x="6308.6956521739139" y="113.16964285714285"/>
         </scene>
-        <!--Setting View Controller-->
+        <!--Color View Controller-->
         <scene sceneID="W8B-vu-4i6">
             <objects>
-                <viewController id="42L-6R-bNA" customClass="SettingViewController" customModule="tippy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="42L-6R-bNA" customClass="ColorViewController" customModule="tippy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cYa-XB-SlF" customClass="GradientView" customModule="tippy" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -143,99 +147,128 @@
                                 <rect key="frame" x="46" y="132" width="127" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="20"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="193" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="j1o-cV-93H">
                                 <rect key="frame" x="41" y="177" width="331" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" red="0.087407879529999996" green="0.38184013960000002" blue="0.72671389580000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <accessibility key="accessibilityConfiguration" label="red"/>
+                                <connections>
+                                    <action selector="handleSettingColor1:" destination="42L-6R-bNA" eventType="valueChanged" id="f38-j7-gmV"/>
+                                </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Red" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z3l-Oz-bQC">
                                 <rect key="frame" x="190" y="160" width="34" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="20"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="231" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="uOG-IK-PeW">
                                 <rect key="frame" x="41" y="225" width="331" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" red="0.087407879529999996" green="0.38184013960000002" blue="0.72671389580000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <accessibility key="accessibilityConfiguration" label="green"/>
+                                <connections>
+                                    <action selector="handleSettingColor1:" destination="42L-6R-bNA" eventType="valueChanged" id="isq-Ru-j0y"/>
+                                </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Green" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vNK-Tt-p7J">
                                 <rect key="frame" x="180" y="207" width="54" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="20"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="251" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="Tna-r7-4nn">
                                 <rect key="frame" x="41" y="274" width="331" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" red="0.087407879529999996" green="0.38184013960000002" blue="0.72671389580000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <accessibility key="accessibilityConfiguration" label="blue"/>
+                                <connections>
+                                    <action selector="handleSettingColor1:" destination="42L-6R-bNA" eventType="valueChanged" id="RUN-du-jhk"/>
+                                </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Blue" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mdB-Gh-w63">
                                 <rect key="frame" x="188" y="256" width="38" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="20"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Setting Color 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="seH-bg-qm9">
                                 <rect key="frame" x="47" y="323" width="128" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="20"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="85" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="Ent-av-SiF">
                                 <rect key="frame" x="42" y="368" width="331" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" red="0.087407879529999996" green="0.38184013960000002" blue="0.72671389580000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <accessibility key="accessibilityConfiguration" label="red"/>
+                                <connections>
+                                    <action selector="handleSettingColor2:" destination="42L-6R-bNA" eventType="valueChanged" id="0ei-jG-mbe"/>
+                                </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Red" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jei-l3-3NC">
                                 <rect key="frame" x="191" y="351" width="34" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="20"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="161" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="sNn-iH-V4d">
                                 <rect key="frame" x="42" y="416" width="331" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" red="0.087407879529999996" green="0.38184013960000002" blue="0.72671389580000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <accessibility key="accessibilityConfiguration" label="green"/>
+                                <connections>
+                                    <action selector="handleSettingColor2:" destination="42L-6R-bNA" eventType="valueChanged" id="DPj-sA-GnL"/>
+                                </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Green" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qIr-4E-E6J">
                                 <rect key="frame" x="181" y="398" width="54" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="20"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="167" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="9RJ-FZ-Trs">
                                 <rect key="frame" x="42" y="465" width="331" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" red="0.087407879529999996" green="0.38184013960000002" blue="0.72671389580000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <accessibility key="accessibilityConfiguration" label="blue"/>
+                                <connections>
+                                    <action selector="handleSettingColor2:" destination="42L-6R-bNA" eventType="valueChanged" id="1XA-pf-YDP"/>
+                                </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Blue" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D1A-oS-Npl">
                                 <rect key="frame" x="189" y="447" width="38" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="20"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Frz-MB-mu4"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="gradientColor1">
-                                <color key="value" red="0.88361515410000002" green="0.3322720462" blue="0.62409671769999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="value" red="0.75686274509999996" green="0.90679614409999998" blue="0.9824817777" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="color" keyPath="gradientColor2">
-                                <color key="value" red="0.087407879529999996" green="0.38184013960000002" blue="0.72671389580000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="value" red="0.33256798319999997" green="0.63137254899999995" blue="0.65490196079999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="keyName" value="setting"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isSub" value="NO"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="settingGrad" destination="cYa-XB-SlF" id="GFF-o6-Jft"/>
+                        <outletCollection property="settingColor1" destination="j1o-cV-93H" collectionClass="NSMutableArray" id="mh4-Qw-21c"/>
+                        <outletCollection property="settingColor1" destination="uOG-IK-PeW" collectionClass="NSMutableArray" id="rZS-Vg-Vid"/>
+                        <outletCollection property="settingColor1" destination="Tna-r7-4nn" collectionClass="NSMutableArray" id="yBV-0J-OLD"/>
+                        <outletCollection property="settingColor2" destination="Ent-av-SiF" collectionClass="NSMutableArray" id="bhl-pK-TwD"/>
+                        <outletCollection property="settingColor2" destination="sNn-iH-V4d" collectionClass="NSMutableArray" id="drH-pV-0Cl"/>
+                        <outletCollection property="settingColor2" destination="9RJ-FZ-Trs" collectionClass="NSMutableArray" id="611-pT-C3r"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oiU-d3-q1p" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -324,7 +357,7 @@
                                 <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="20"/>
                                 <state key="normal" title="Settings Color"/>
                                 <connections>
-                                    <segue destination="42L-6R-bNA" kind="show" id="nb0-Pm-EKb"/>
+                                    <segue destination="42L-6R-bNA" kind="show" id="BNB-Yo-5rg"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -340,8 +373,11 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="keyName" value="setting"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isSub" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
-                        <outlet property="SettingGrad1" destination="4vq-Ub-ph0" id="ChS-ya-8zO"/>
                         <outletCollection property="tipPercentages" destination="LHK-EL-c9a" collectionClass="NSMutableArray" id="zsM-Xx-DIH"/>
                         <outletCollection property="tipPercentages" destination="tp5-g9-oFe" collectionClass="NSMutableArray" id="6y9-8o-Gsz"/>
                         <outletCollection property="tipPercentages" destination="MnA-4i-mDY" collectionClass="NSMutableArray" id="onb-OF-pkV"/>
@@ -351,10 +387,11 @@
             </objects>
             <point key="canvasLocation" x="6978.2608695652179" y="111.83035714285714"/>
         </scene>
-        <!--View Controller-->
+        <!--Color View Controller-->
         <scene sceneID="h7l-F9-ODi">
             <objects>
-                <viewController id="7t7-SJ-z3Z" customClass="ViewController" customModule="tippy" customModuleProvider="target" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bNt-Cy-Xdz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="7t7-SJ-z3Z" customClass="ColorViewController" customModule="tippy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wiP-IP-uW6" customClass="GradientView" customModule="tippy" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -363,86 +400,110 @@
                                 <rect key="frame" x="46" y="108" width="111" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="20"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="225" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="8Y8-g8-qj3">
                                 <rect key="frame" x="41" y="153" width="331" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.087407879529999996" green="0.38184013960000002" blue="0.72671389580000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <accessibility key="accessibilityConfiguration" label="red"/>
+                                <connections>
+                                    <action selector="handleMainColor1:" destination="7t7-SJ-z3Z" eventType="valueChanged" id="my0-HN-IMn"/>
+                                </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Red" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="adj-kF-4cW">
                                 <rect key="frame" x="190" y="136" width="34" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="20"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="85" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="xTC-Gm-0Sz">
                                 <rect key="frame" x="41" y="201" width="331" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.087407879529999996" green="0.38184013960000002" blue="0.72671389580000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <accessibility key="accessibilityConfiguration" label="green"/>
+                                <connections>
+                                    <action selector="handleMainColor1:" destination="7t7-SJ-z3Z" eventType="valueChanged" id="axd-hE-k2P"/>
+                                </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Green" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xor-C2-Pyy">
                                 <rect key="frame" x="180" y="183" width="54" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="20"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="159" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="8W0-OS-t9A">
                                 <rect key="frame" x="41" y="250" width="331" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.087407879529999996" green="0.38184013960000002" blue="0.72671389580000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <accessibility key="accessibilityConfiguration" label="blue"/>
+                                <connections>
+                                    <action selector="handleMainColor1:" destination="7t7-SJ-z3Z" eventType="valueChanged" id="BIc-xD-td8"/>
+                                </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Blue" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="utH-Xc-UXU">
                                 <rect key="frame" x="188" y="232" width="38" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="20"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Main Color 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LWr-Rk-SwF">
                                 <rect key="frame" x="47" y="299" width="112" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="20"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="22" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="IhY-EU-RJJ">
                                 <rect key="frame" x="42" y="344" width="331" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.087407879529999996" green="0.38184013960000002" blue="0.72671389580000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration" label="red"/>
+                                <connections>
+                                    <action selector="handleMainColor2:" destination="7t7-SJ-z3Z" eventType="valueChanged" id="0cj-FR-eSn"/>
+                                </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Red" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vCy-7t-mtz">
                                 <rect key="frame" x="191" y="327" width="34" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="20"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="97" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="gNg-WV-viq">
                                 <rect key="frame" x="42" y="392" width="331" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.087407879529999996" green="0.38184013960000002" blue="0.72671389580000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration" label="green"/>
                                 <connections>
-                                    <action selector="handleMainColor2:" destination="7t7-SJ-z3Z" eventType="valueChanged" id="fxZ-WO-UU0"/>
+                                    <action selector="handleMainColor2:" destination="7t7-SJ-z3Z" eventType="valueChanged" id="CRE-b2-9pV"/>
                                 </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Green" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aP6-Ad-Qwy">
                                 <rect key="frame" x="181" y="374" width="54" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="20"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="185" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="KPp-k7-B1I">
                                 <rect key="frame" x="42" y="441" width="331" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.087407879529999996" green="0.38184013960000002" blue="0.72671389580000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration" label="blue"/>
+                                <connections>
+                                    <action selector="handleMainColor2:" destination="7t7-SJ-z3Z" eventType="valueChanged" id="zBg-5R-PJ5"/>
+                                </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Blue" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dck-LD-NS4">
                                 <rect key="frame" x="189" y="423" width="38" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="20"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -450,21 +511,27 @@
                         <viewLayoutGuide key="safeArea" id="zbD-QR-qaj"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="gradientColor2">
-                                <color key="value" red="0.33256798321620906" green="0.63137254901960782" blue="0.65490196078431373" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="value" red="0.087407879529999996" green="0.38184013960000002" blue="0.72671389580000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="color" keyPath="gradientColor1">
-                                <color key="value" red="0.75686274509803919" green="0.90679614410782727" blue="0.9824817777" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="value" red="0.88361515410000002" green="0.3322720462" blue="0.62409671769999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="keyName" value="main"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isSub" value="NO"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
-                        <outlet property="SettingGrad2" destination="wiP-IP-uW6" id="vpj-Wp-Mng"/>
-                        <outletCollection property="mainColor2" destination="IhY-EU-RJJ" collectionClass="NSMutableArray" id="NMI-ZX-cD2"/>
-                        <outletCollection property="mainColor2" destination="gNg-WV-viq" collectionClass="NSMutableArray" id="kXe-a3-NX5"/>
-                        <outletCollection property="mainColor2" destination="KPp-k7-B1I" collectionClass="NSMutableArray" id="mv3-Sf-Zkf"/>
+                        <outlet property="mainGrad" destination="wiP-IP-uW6" id="dqp-I0-Afv"/>
+                        <outletCollection property="mainColor1" destination="8Y8-g8-qj3" collectionClass="NSMutableArray" id="lSR-gC-lp6"/>
+                        <outletCollection property="mainColor1" destination="xTC-Gm-0Sz" collectionClass="NSMutableArray" id="aYN-MX-tQV"/>
+                        <outletCollection property="mainColor1" destination="8W0-OS-t9A" collectionClass="NSMutableArray" id="GD4-mz-WFy"/>
+                        <outletCollection property="mainColor2" destination="IhY-EU-RJJ" collectionClass="NSMutableArray" id="MsD-m4-l6D"/>
+                        <outletCollection property="mainColor2" destination="gNg-WV-viq" collectionClass="NSMutableArray" id="SYb-Qv-Oud"/>
+                        <outletCollection property="mainColor2" destination="KPp-k7-B1I" collectionClass="NSMutableArray" id="7F1-kf-YA4"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bNt-Cy-Xdz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="7710" y="115"/>
         </scene>

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FB1BA648231B33CB00C41EE1 /* ColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1BA647231B33CB00C41EE1 /* ColorViewController.swift */; };
 		FB374A8A230E27B90090007B /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB374A89230E27B90090007B /* GradientView.swift */; };
 		FB655E822313746900C5B4BE /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB655E812313746900C5B4BE /* SettingViewController.swift */; };
 		FB655E882317705600C5B4BE /* textView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB655E872317705600C5B4BE /* textView.swift */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FB1BA647231B33CB00C41EE1 /* ColorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorViewController.swift; sourceTree = "<group>"; };
 		FB374A89230E27B90090007B /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		FB655E812313746900C5B4BE /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		FB655E872317705600C5B4BE /* textView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = textView.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				FB655E812313746900C5B4BE /* SettingViewController.swift */,
 				FBFA4300230D0D63001D3843 /* AppDelegate.swift */,
 				FBFA4302230D0D63001D3843 /* ViewController.swift */,
+				FB1BA647231B33CB00C41EE1 /* ColorViewController.swift */,
 				FBFA4304230D0D63001D3843 /* Main.storyboard */,
 				FB374A89230E27B90090007B /* GradientView.swift */,
 				FB655E872317705600C5B4BE /* textView.swift */,
@@ -269,6 +272,7 @@
 				FBFA4301230D0D63001D3843 /* AppDelegate.swift in Sources */,
 				FB374A8A230E27B90090007B /* GradientView.swift in Sources */,
 				FB655E822313746900C5B4BE /* SettingViewController.swift in Sources */,
+				FB1BA648231B33CB00C41EE1 /* ColorViewController.swift in Sources */,
 				FB655E882317705600C5B4BE /* textView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

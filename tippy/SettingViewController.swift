@@ -8,20 +8,16 @@
 
 import UIKit
 
-class SettingViewController: UIViewController {
+class SettingViewController: ColorViewController {
     
 
     @IBOutlet var SettingGrad1: GradientView!
     @IBOutlet var SettingGrad2: GradientView!
-    
-    let defaults = UserDefaults.standard
-    
+        
     @IBOutlet var tipPercentages: [UIButton]!
     override func viewDidLoad() {
         super.viewDidLoad()
-//        if(mainGrad.gradientColor1 ){
-//            mainGrad.gradientColor1 = UIColor.black
-//        }
+
         // Do any additional setup after loading the view.
     }
     
@@ -53,9 +49,4 @@ class SettingViewController: UIViewController {
         }
     }
     
-    @IBAction func handleSettingColor1(_ sender: UISlider) {
-    }
-    
-    @IBAction func handleSettingColor2(_ sender: UISlider) {
-    }
 }
