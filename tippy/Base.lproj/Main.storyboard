@@ -385,6 +385,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
                         <viewLayoutGuide key="safeArea" id="pjl-Cx-yIN"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="gradientColor1">
@@ -394,6 +395,9 @@
                                 <color key="value" red="0.33502945581894877" green="0.63165289408767122" blue="0.65556604514490413" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="0Vn-RT-vVZ" appends="YES" id="t2G-PN-h1r"/>
+                        </connections>
                     </view>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="keyName" value="setting"/>
@@ -406,6 +410,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KVb-Fc-mog" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="0Vn-RT-vVZ">
+                    <connections>
+                        <action selector="closeDropDown:" destination="8e5-iE-h8y" id="3h0-TO-WVL"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="7888.4057971014499" y="111.83035714285714"/>
         </scene>

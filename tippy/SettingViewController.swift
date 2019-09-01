@@ -48,4 +48,12 @@ class SettingViewController: ViewController {
         }
     }
     
+
+    @IBAction func closeDropDown(_ sender: Any) {
+        tipPercentages.forEach{button in
+            if(!button.isHidden){
+                button.isHidden = !button.isHidden
+            }
+        }
+    }
 }
