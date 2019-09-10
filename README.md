@@ -28,7 +28,7 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='https://i.imgur.com/wyvSYdU.gif' title='tippyDemo' width='' alt='Video Demo' />
+<img src='https://i.imgur.com/lOKoDeL.gif' title='tippyDemo' width='' alt='Video Demo' />
 
 ## Notes
 
